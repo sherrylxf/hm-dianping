@@ -22,4 +22,7 @@ public class RedisConstants {
     
     public static final String CACHE_SHOP_TYPE_KEY = "cache:shop-type:list";
     public static final Long CACHE_SHOP_TYPE_TTL = 30L;
+    
+    // 布隆过滤器相关常量
+    public static final String BLOOM_FILTER_SHOP_KEY = "bloom:shop";
 }
