@@ -10,6 +10,9 @@ public class RedisConstants {
 
     public static final Long CACHE_SHOP_TTL = 30L;
     public static final String CACHE_SHOP_KEY = "cache:shop:";
+    
+    // 逻辑过期时间（秒），用于逻辑过期方案，便于测试和观察效果
+    public static final Long CACHE_SHOP_LOGIC_EXPIRE = 10L; // 10秒，可根据需要调整
 
     public static final String LOCK_SHOP_KEY = "lock:shop:";
     public static final Long LOCK_SHOP_TTL = 10L;
