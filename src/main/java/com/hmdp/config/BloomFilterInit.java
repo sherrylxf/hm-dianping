@@ -53,3 +53,4 @@ public class BloomFilterInit implements CommandLineRunner {
         log.info("布隆过滤器初始化完成，共加载 {} 个店铺ID", shopIds.size());
     }
 }
+
