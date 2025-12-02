@@ -4,7 +4,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 /**
@@ -24,7 +24,8 @@ public class RedisIdWorker {
     public long nextId(String keyPrefix) {
         // 1.生成时间戳
         LocalDateTime now = LocalDateTime.now();
-        long nowSecond = now.toEpochSecond(ZoneOffset.from(now));
+        // 使用系统默认时区转换为时间戳
+        long nowSecond = now.atZone(ZoneId.systemDefault()).toEpochSecond();
         long timestamp = nowSecond - BEGIN_TIMESTAMP;
         // 2.生成序列号
         // 2.1 获取当前日期，精确到天
