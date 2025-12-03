@@ -57,6 +57,12 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.17</version>
         </dependency>
+        <!--redisson-->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.13.6</version>
+        </dependency>
         <!-- AspectJ 支持，用于 AOP 代理 -->
         <dependency>
             <groupId>org.aspectj</groupId>
